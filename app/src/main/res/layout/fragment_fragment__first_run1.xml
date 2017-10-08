@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+
+    android:layout_height="match_parent"
+    tools:context="com.chaitanyad.rembrit.Fragment_FirstRun1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_gravity="center_horizontal|top"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:textColor="@android:color/white"
+        android:textSize="27dp"
+        android:text="Welcome to Rembrit." />
+
+    <ImageView
+        android:layout_width="161dp"
+        android:layout_height="161dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/rembrit"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:layout_marginBottom="50dp"
+        android:text="Rembrit needs to know your schedule\nto help you better.\n\nSo tell us," />
+
+</FrameLayout>

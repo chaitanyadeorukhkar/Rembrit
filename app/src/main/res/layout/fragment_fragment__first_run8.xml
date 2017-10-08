@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.chaitanyad.rembrit.Fragment_FirstRun8">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_height="59dp"
+        android:text="What time do you have dinner?"
+        android:layout_gravity="center_horizontal|top"
+        android:allowUndo="false"
+        android:contextClickable="false"
+        android:editable="false"
+        android:enabled="true"
+        android:id="@+id/textView" />
+
+
+
+    <TimePicker
+        android:amPmBackgroundColor="@color/colorAccent"
+        android:headerBackground="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="357dp"
+        android:id="@+id/dinnerTime"
+        android:layout_gravity="center"
+        android:timePickerMode="clock" />
+
+</FrameLayout>

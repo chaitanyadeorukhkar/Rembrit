@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/beforeRbGroup"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+
+            android:id="@+id/rbbeforeWakeup"
+            android:text="Before I wake up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbbeforeLeaveForWork"
+            android:text="Before I leave for work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+
+            android:id="@+id/rbbeforeReachWork"
+            android:text="Before I reach work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+
+            android:id="@+id/rbbeforeLunch"
+            android:text="Before I have lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+
+            android:id="@+id/rbbeforeLeaveFromWork"
+            android:text="Before I leave from work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbbeforeReachHome"
+            android:text="Before I reach home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbbeforeDinner"
+            android:text="Before I have dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbbeforeSleep"
+            android:text="Before I sleep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/beforedatespinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <LinearLayout
+
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnbeforecancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnbeforesave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+</LinearLayout>

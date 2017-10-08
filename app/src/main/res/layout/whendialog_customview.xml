@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+<RadioGroup
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:id="@+id/whenRbGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RadioButton
+
+        android:id="@+id/rbwhenWakeup"
+            android:text="When I wake up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbwhenLeaveForWork"
+        android:text="When I leave for work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+
+        android:id="@+id/rbwhenReachWork"
+        android:text="When I reach work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+
+        android:id="@+id/rbwhenLunch"
+        android:text="When I have lunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+
+        android:id="@+id/rbwhenLeaveFromWork"
+        android:text="When I leave from work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbwhenReachHome"
+        android:text="When I reach home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbwhenDinner"
+        android:text="When I have dinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbwhenSleep"
+        android:text="When I sleep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RadioGroup>
+
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/whendatespinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <LinearLayout
+
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnwhencancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnwhensave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+<RadioGroup
+    android:id="@+id/afterRbGroup"
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RadioButton
+
+        android:id="@+id/rbafterWakeup"
+            android:text="After I wake up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbafterLeaveForWork"
+        android:text="After I leave for work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+
+        android:id="@+id/rbafterReachWork"
+        android:text="After I reach work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+
+        android:id="@+id/rbafterLunch"
+        android:text="After I have lunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+
+        android:id="@+id/rbafterLeaveFromWork"
+        android:text="After I leave from work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbafterReachHome"
+        android:text="After I reach home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbafterDinner"
+        android:text="After I have dinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioButton
+        android:id="@+id/rbafterSleep"
+        android:text="After I sleep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RadioGroup>
+
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/afterdatespinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <LinearLayout
+
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnaftercancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnaftersave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+</LinearLayout>

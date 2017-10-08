@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+
+    android:layout_height="match_parent"
+    tools:context="com.chaitanyad.rembrit.Fragment_FirstRun9_1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:text="We promise to make your experience better.\nWe're ready to begin." />
+
+    <TextView
+        android:layout_gravity="center_horizontal|top"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:textColor="@android:color/white"
+        android:textSize="27dp"
+        android:text="Thank you." />
+
+</FrameLayout>
