@@ -84,7 +84,7 @@ public class Fragment_FirstRun10 extends Fragment {
         confSleep= (TextView) view.findViewById(R.id.confSleep);
 
 
-        confWakeup.setText("Wake up at "+MainActivity.converttime(FirstRunActivity.globWakeupHour,FirstRunActivity.globWakeupMin    ));
+        confWakeup.setText("Wake up at "+MainActivity.converttime(FirstRunActivity.globWakeupHour,FirstRunActivity.globWakeupMin ));
         confLeaveForWork.setText("Leave for work at "+MainActivity.converttime(FirstRunActivity.globLeaveForWorkHour,FirstRunActivity.globLeaveForWorkMin));
         confReachWork.setText("Reach work at "+MainActivity.converttime(FirstRunActivity.globReachWorkHour,FirstRunActivity.globReachWorkMin));
         confLunch.setText("Lunch at "+MainActivity.converttime(FirstRunActivity.globLunchHour,FirstRunActivity.globLunchMin));
