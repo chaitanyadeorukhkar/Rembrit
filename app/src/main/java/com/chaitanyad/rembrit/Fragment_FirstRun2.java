@@ -3,12 +3,19 @@ package com.chaitanyad.rembrit;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TimePicker;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import picker.ugurtekbas.com.Picker.Picker;
+import picker.ugurtekbas.com.Picker.TimeChangedListener;
 
 
 /**
@@ -29,7 +36,7 @@ public class Fragment_FirstRun2 extends Fragment  {
     private String mParam1;
     private String mParam2;
     public TimePicker wakeupTimePicker;
-
+    public Picker wakeupPicker;
     private OnFragmentInteractionListener mListener;
 
     public Fragment_FirstRun2() {
@@ -73,8 +80,19 @@ public class Fragment_FirstRun2 extends Fragment  {
         wakeupTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-                FirstRunActivity.globWakeupHour=hourOfDay;
-                FirstRunActivity.globWakeupMin=minute;
+             //   FirstRunActivity.globWakeupHour=hourOfDay;
+               // FirstRunActivity.globWakeupMin=minute;
+
+                wakeupPicker.setTime(9,0);
+                wakeupPicker.setTimeChangedListener(new TimeChangedListener() {
+                    @Override
+                    public void timeChanged(Date date) {
+                        Calendar calendar= Calendar.getInstance();
+                        calendar.setTime(date);
+                        FirstRunActivity.globWakeupHour=calendar.get(Calendar.HOUR_OF_DAY);
+                        FirstRunActivity.globWakeupMin=calendar.get(Calendar.MINUTE);
+                    }
+                });
 
             }
         });
