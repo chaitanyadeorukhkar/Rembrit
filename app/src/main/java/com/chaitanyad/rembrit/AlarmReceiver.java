@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
@@ -21,7 +22,8 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         DatabaseHelper db;
         db = new DatabaseHelper(context);
-
+        PowerManager.WakeLock wakeLock = ((PowerManager) context.getSystemService(Context.POWER_SERVICE)).newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK, "MainActivity");
+        wakeLock.acquire();
         Cursor res = db.getMaxId();
         StringBuffer buffer = new StringBuffer();
         if (res.getCount() == 0) {

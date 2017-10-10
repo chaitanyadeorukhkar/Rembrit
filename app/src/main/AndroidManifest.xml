@@ -28,7 +28,6 @@
                 <action android:name="com.chaitanyad.rembrit.Action_Activity.notifier" />
             </intent-filter>
         </receiver>
-
         <activity android:name=".FirstRunActivity"></activity>
     </application>
 
