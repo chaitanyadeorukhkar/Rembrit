@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnwhen;
     Button btnbef;
     Button btnaft;
+    Button btntask;
     public boolean isFirstStart;
     GridLayout gltimetext;
     long notifId;
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         btnaft = (Button) findViewById(R.id.btnaft);
         btnwhen = (Button) findViewById(R.id.btnwhen);
         btnunt = (Button) findViewById(R.id.btnunt);
+        btntask = (Button) findViewById(R.id.btntask);
         gltimetext = (GridLayout) findViewById(R.id.gltimetext);
         calendar_when = Calendar.getInstance();
         remtext.setText("");
@@ -187,6 +189,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btntask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm=getSupportFragmentManager();
+                DialogTask dialogTask=new DialogTask();
+                dialogTask.setStyle(DialogFragment.STYLE_NORMAL,R.style.CustomDialog);
+                dialogTask.show(fm,"a");
+            }
+        });
+
         populateListView();
 
     }
@@ -270,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
             atdatespinnerarray.add("Today");
             atdatespinnerarray.add("Tomorrow");
             atdatespinnerarray.add("Custom");
+
             final ArrayAdapter atdateadapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, atdatespinnerarray);
             atdateadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             atdatespinner.setAdapter(atdateadapter);
@@ -420,6 +433,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public static class DialogTask extends DialogFragment {
+        @Nullable
+
+        Button taskSave;
+        Button taskCancel;
+        //TODO: Button clicks, DatePicker, accept inputs and set task.
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+            getDialog().setTitle("Set a Task");
+            View rootView = inflater.inflate(R.layout.setastaskdialog_customview, container, false);
+            final Spinner prioritySpinner = (Spinner) rootView.findViewById(R.id.priorityspinner);
+            final ArrayList<String> priorityStrings = new ArrayList<>();
+            priorityStrings.add("Urgent");
+            priorityStrings.add("Important");
+            priorityStrings.add("Normal");
+            priorityStrings.add("Procrastinate");
+            final ArrayAdapter priorityAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, priorityStrings);
+            priorityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            prioritySpinner.setAdapter(priorityAdapter);
+
+            return rootView;
+        }
+    }
 
     public static class Dialogwhen extends DialogFragment {
         public int globHour, globMin, globYear, globMonth, globDay;
@@ -784,7 +820,7 @@ public class MainActivity extends AppCompatActivity {
                         setReminder(v.getContext(), remtime, remtext.getText().toString());
 
                         db.insertData(remtext.getText().toString(), remtime); // INSERT Reminder into DB
-getDialog().dismiss();
+                        getDialog().dismiss();
                         Toast.makeText(getContext(), "Reminder set!", Toast.LENGTH_SHORT).show();
                         remtext.setText("");
                         getInstance().populateListView();
@@ -1037,7 +1073,7 @@ getDialog().dismiss();
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
         alarmManager.set(AlarmManager.RTC_WAKEUP, remtime, PendingIntent.getBroadcast(context.getApplicationContext(), 1, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
-        Toast.makeText(context,"in set rem",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context,"in set rem",Toast.LENGTH_SHORT).show();
 
     }
 
